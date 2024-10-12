@@ -15,7 +15,7 @@ void Nhap(Phanso &x) {
     cin >> x.mau;
 }
 
-// Ham xuat phan so
+// Hàm xuất phân số
 void Xuat(const Phanso &x) {
     if (x.mau == 0) {
         cout << "Khong ton tai phan so" << endl; 
@@ -28,7 +28,11 @@ void Xuat(const Phanso &x) {
     }
 }
 
-// Ham rut gon phan so
+/*Hàm rút gọn phân số
+Đầu vào: Tử và mẫu của 1 phân số.
+Đầu ra: Phân số đã được rút gọn.
+Thực thi: Chia tử và mẫu cho UCLN của chúng đến khi không chia được nữa.
+*/ 
 void Rutgon(Phanso &x) {
     if (x.mau == 0) {
         return; 

@@ -28,7 +28,12 @@ void Xuat(const Phanso &x) {
     }
 }
 
-// Ham rut gon phan so
+/* Ham rut gon phan so
+   Dau vao: Tu va mau cua 1 phan so.
+   Dau ra: Phan so da duoc rut gon.
+   Thuc thi: Chia tu va mau cho UCLN cua chung den khi khong chia duoc nua.
+*/
+
 void Rutgon(Phanso &x) {
     if (x.mau == 0) {
         return; 

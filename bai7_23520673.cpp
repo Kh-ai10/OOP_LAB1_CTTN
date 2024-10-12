@@ -16,7 +16,7 @@ struct Gio {
     int phut;
 };
 
-
+// Các thuộc tính của chuyến bay
 struct ChuyenBay {
     char machuyenbay[6];
     Ngay d_khoihanh;
@@ -25,7 +25,7 @@ struct ChuyenBay {
     char den[21];
 };
 
-
+// Kiem tra nam nhuan
 bool namnhuan(int nam) {
     return (nam % 4 == 0 && nam % 100 != 0) || (nam % 400 == 0);
 }
@@ -39,7 +39,7 @@ int ngay_trongthang(int thang, int nam) {
     return thangco_ngay[thang - 1];
 }
 
-
+// Định dạng mã chuyến bay (không gồm kí tự đặc biệt)
 bool ktra_machuyenbay(const char* ma) {
     if (strlen(ma) > 5) return false;
     for (int i = 0; ma[i] != '\0'; ++i) 
@@ -49,18 +49,18 @@ bool ktra_machuyenbay(const char* ma) {
     return true;
 }
 
-
+// Đảm bảo ngày tổn tại theo lịch
 bool ktra_ngay(const Ngay& ngay_thang_nam) {
     if (ngay_thang_nam.nam < 1 || ngay_thang_nam.thang < 1 || ngay_thang_nam.thang > 12) return false;
     return ngay_thang_nam.ngay >= 1 && ngay_thang_nam.ngay <= ngay_trongthang(ngay_thang_nam.thang, ngay_thang_nam.nam);
 }
 
-
+// Định dạng hh : mm
 bool ktra_gio(int gio, int phut) {
     return gio >= 0 && gio < 24 && phut >= 0 && phut < 60;
 }
 
-
+// Định dạng địa điểm (không gồm kí tự đặc biệt)
 bool ktra_dd(const char* dd) {
     if (strlen(dd) > 20) return false;
 
