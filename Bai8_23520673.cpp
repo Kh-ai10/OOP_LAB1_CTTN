@@ -353,7 +353,7 @@ void timSTK(const vector<Sotietkiem>& ds) {
 }
 
 // Hàm liệt kê sổ tiết kiệm theo khoảng thời gian
-void timtheoDate(const vector<Sotietkiem>& ds) {
+void tim_theo_thoigian(const vector<Sotietkiem>& ds) {
     string ngayBatDau, ngayKetThuc;
 
     while (true) {
@@ -544,7 +544,7 @@ int main() {
                 cout << "\t(!) Vui long nhap so tiet kiem!\n";
                     break;
                 }
-                timtheoDate(dsSO);
+                tim_theo_thoigian(dsSO);
                 break;
             }
         case '7':
